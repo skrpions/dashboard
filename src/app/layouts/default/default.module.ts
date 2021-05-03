@@ -5,6 +5,7 @@ import { DefaultRoutingModule } from './default-routing.module';
 import { DefaultComponent } from './Componentes/default/default.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/Componentes/dashboard/dashboard.component';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     DefaultRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ]
 })
 export class DefaultModule { }
