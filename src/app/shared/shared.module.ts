@@ -8,10 +8,22 @@ import { SidebarComponent } from './Componentes/sidebar/sidebar.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, SidebarComponent],
+  declarations:
+  [
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent
+  ],
   imports: [
     CommonModule,
     SharedRoutingModule
+  ],
+  // Aqui exportaré los componentes
+  exports:
+  [
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
