@@ -24,7 +24,7 @@ const routes: Routes = [
       component: DashboardComponent
       },
       {
-        path:'posts',
+        path:'post',
         component: PostComponent
       }
     ]

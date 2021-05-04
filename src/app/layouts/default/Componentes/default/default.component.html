@@ -2,12 +2,19 @@
 <app-header></app-header>
 
 
-<router-outlet></router-outlet>
+
 <button routerLink="/auth" mat-raised-button color="primary"> LOGIN </button>
 
 <mat-drawer-container>
-  <mat-drawer mode="side" opened></mat-drawer>
-  <mat-drawer-content></mat-drawer-content>
+  <!-- Start :: Menú lateral-->
+  <mat-drawer mode="side" opened>
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+
+  <!-- Start :: Área del contenido -->
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
 
 </mat-drawer-container>
 
