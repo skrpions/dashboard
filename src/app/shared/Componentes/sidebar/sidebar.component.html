@@ -1,1 +1,37 @@
-<p>sidebar works!</p>
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h2>NESTOR MARTINEZ</h2>
+      <h4>sksmartinez@gmail.com</h4>
+    </div>
+    <img id="avatar" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Avatar">
+  </div>
+
+  <hr>
+
+  <h2 matSubheader>Páginas</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/panel-administrativo">Dashboard</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/panel-administrativo/post">Post</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/panel-administrativo/articles">Articles</a>
+
+  <hr>
+
+  <h2 matSubheader> Topls</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/panel-administrativo/contacts">
+    <mat-icon>import_contacts</mat-icon>
+    Contáctos
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/panel-administrativo/contacts">
+    <mat-icon>contact_phone</mat-icon>
+    Leads
+  </a>
+
+
+</mat-nav-list>
+
+
+
+

@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultComponent implements OnInit {
 
+  // Muestro el menu lateral izquierdo (Sidebar)
+  sideBarOpen = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sideBarToggler()
+  {
+    this.sideBarOpen = !this.sideBarOpen;
   }
 
 }

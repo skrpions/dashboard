@@ -26,7 +26,8 @@ import { MatSidenavModule} from '@angular/material/sidenav';
     MatButtonModule,
     RouterModule,
     SharedModule,
-    MatSidenavModule
+    MatSidenavModule,
+
   ]
 })
 export class DefaultModule { }

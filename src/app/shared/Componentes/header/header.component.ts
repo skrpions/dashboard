@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
+
+ /*  @Output() menuState = new EventEmitter(); */
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  /* opened: boolean;
+  showMenu = false; /* false by default, since hidden */
+ /*  toggleMenu() {
+      console.log("inside toggleMenu");
+      this.showMenu = !this.showMenu;
+      this.menuState.emit(this.showMenu);
+   } */
+
+  togleSideBar()
+  {
+    this.toggleSideBarForMe.emit();
   }
 
 }

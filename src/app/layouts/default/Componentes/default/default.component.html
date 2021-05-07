@@ -1,13 +1,9 @@
 
-<app-header></app-header>
-
-
-
-<button routerLink="/auth" mat-raised-button color="primary"> LOGIN </button>
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
 
 <mat-drawer-container>
   <!-- Start :: Menú lateral-->
-  <mat-drawer mode="side" opened>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
     <app-sidebar></app-sidebar>
   </mat-drawer>
 
