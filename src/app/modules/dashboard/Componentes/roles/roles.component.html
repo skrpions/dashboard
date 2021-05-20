@@ -1,0 +1,72 @@
+<p>roles works!</p>
+
+
+<mat-card>
+  <form [formGroup]="formulario" (ngSubmit)="registrar_rol($event)" class="shadow" novalidate>
+    <div class="row">
+      <!-- Rol -->
+      <div class="col-6">
+        <div class="form-group">
+          <div class="example-container">
+            <mat-form-field hintLabel="Max 15 caracteres" appearance="fill">
+              <mat-label for="Descripcion"><mat-icon>favorite</mat-icon> Nuevo Rol:</mat-label>
+              <input [(ngModel)]="DataModel_Rol.Descripcion" formControlName="Descripcion"
+                type="text" class="form-control" id="Descripcion" matInput #input
+                maxlength="15" placeholder="Ej. Mayordomo"/>
+              <mat-hint align="end">{{ input.value?.length || 0 }}/15</mat-hint>
+            </mat-form-field>
+
+            <!-- Start :: Botón Registar -->
+            <button type="submit" name="enviar" mat-fab aria-label="" color="primary" id="btnEnviar">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <div class="col-1">
+        <button type="submit" name="enviar" mat-fab aria-label="" color="primary">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div> -->
+
+    </div>
+  </form>
+</mat-card>
+
+<!-- Start :: Formulario de Roles -->
+<!-- <div>
+  <form [formGroup]="formulario" (ngSubmit)="registrar_rol($event)" class="shadow" novalidate >
+      <div class="row">
+
+          <div class="col-3">
+              <div class="form-group">
+                  <label for="Descripcion">Nuevo Rol:*</label>
+                  <input [(ngModel)]="DataModel_Rol.Descripcion" formControlName="Descripcion" type="text" class="form-control" id="Descripcion" placeholder="">
+                  {{rolField.value.length}}/15
+                  <span class="icon-left"><i class="fas fa-check-circle"></i></span>
+                  <span class="msj" *ngIf="rolField.errors && rolField.touched">
+                      <p *ngIf="rolField.hasError('required')">
+                      Campo Requerido *
+                      </p>
+                      <p *ngIf="rolField.hasError('maxlength')">
+                      Te pasaste, máximo deben haber 15 caracteres.
+                      </p>
+                  </span>
+              </div>
+          </div>
+      </div>
+
+      <br>
+
+
+      <div class="row">
+          <div class="col-3"> -->
+<!-- Enviar -->
+<!--  <button type="submit" name="enviar" class="btn btn-primary btn-lg btn-block">Enviar</button>
+          </div>
+      </div>
+  </form>
+</div> -->
+<!-- End :: Formulario de Roles -->

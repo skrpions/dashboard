@@ -27,6 +27,11 @@ export class HeaderComponent implements OnInit {
   togleSideBar()
   {
     this.toggleSideBarForMe.emit();
-  }
 
+    // Vuelvo responsiva la gráfica
+    setTimeout(() =>
+    {
+      window.dispatchEvent(new Event ('resize'));
+    }, 300);
+  }
 }

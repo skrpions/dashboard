@@ -13,7 +13,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatListModule} from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { HighchartsChartModule } from 'highcharts-angular';
 import { AreaComponent } from './Widgets/area/area.component';
+import { CardComponent } from './Widgets/card/card.component';
+import { PieComponent } from './Widgets/pie/pie.component';
 
 
 
@@ -23,7 +28,9 @@ import { AreaComponent } from './Widgets/area/area.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AreaComponent
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   imports: [
     CommonModule,
@@ -36,14 +43,23 @@ import { AreaComponent } from './Widgets/area/area.component';
     FlexLayoutModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    HighchartsChartModule
   ],
   // Aqui exportaré los componentes
   exports:
   [
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent
+
+  ],
+  providers: [],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class SharedModule { }
